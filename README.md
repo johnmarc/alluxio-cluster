@@ -2,7 +2,7 @@
 
 This is a **working** multi-node docker image that lets you run Alluxio (ex-Tachyon)
 
-https://hub.docker.com/r/ajmssc/alluxio/
+https://hub.docker.com/r/ajmssc/alluxio-cluster/
 
 The docker-compose.yml assumes DOCKER_HOST=192.168.99.100. Change to your docker host ip or use something with better networking like docker-swarm or mesos
 
