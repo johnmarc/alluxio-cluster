@@ -10,6 +10,8 @@
 # - ALLUXIO_WORKER_MEMORY_SIZE, to set how much memory to use (e.g. 1000mb, 2gb) per worker
 # - ALLUXIO_RAM_FOLDER, to set where worker stores in memory data
 
+. /alluxio-environment.sh
+
 #TEST
 
 # Support for Multihomed Networks.
