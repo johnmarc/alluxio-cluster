@@ -1,7 +1,7 @@
 FROM anapsix/alpine-java:jdk7
 
 MAINTAINER Jean-Marc Soumet (https://github.com/ajmssc)
-ARG ALLUXIO_VERSION=1.0.1
+ARG ALLUXIO_VERSION=1.2.0
 
 RUN apk add --update wget sudo supervisor openssh
 RUN wget http://alluxio.org/downloads/files/${ALLUXIO_VERSION}/alluxio-${ALLUXIO_VERSION}-bin.tar.gz -O /alluxio.tar.gz && \
