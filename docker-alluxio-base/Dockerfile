@@ -9,7 +9,7 @@ ARG ALLUXIO_VERSION=1.2.0
 RUN apk add --update wget sudo supervisor openssh
 RUN wget http://alluxio.org/downloads/files/${ALLUXIO_VERSION}/alluxio-${ALLUXIO_VERSION}-bin.tar.gz -O /alluxio.tar.gz && \
     tar xvzf /alluxio.tar.gz && mv /alluxio-* /alluxio && \
-    rm -rf /alluxio.tar.gz 
+    rm -rf /alluxio.tar.gz
 
 
 ## Create ssh key
@@ -23,10 +23,5 @@ ENV TERM=xterm
 
 RUN mkdir -p /dev/ram
 RUN mkdir /data
-RUN rm -rf /alluxio/conf
-ADD conf /alluxio/conf
 ADD supervisord-*.conf /
 ADD start.sh /
-
-
-#CMD ["/start.sh"]
