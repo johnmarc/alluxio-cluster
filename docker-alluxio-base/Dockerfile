@@ -1,6 +1,9 @@
 FROM anapsix/alpine-java:jdk7
 
-MAINTAINER Jean-Marc Soumet (https://github.com/ajmssc)
+#Original Maintainer
+#MAINTAINER Jean-Marc Soumet (https://github.com/ajmssc)
+MAINTAINER Koddi Inc. (https://koddi.com)
+
 ARG ALLUXIO_VERSION=1.2.0
 
 RUN apk add --update wget sudo supervisor openssh
@@ -17,10 +20,6 @@ RUN rm -f /root/.ssh/id_rsa && \
     chmod og-wx ~/.ssh/authorized_keys
 
 ENV TERM=xterm
-ENV ALLUXIO_WORKER_MEMORY_SIZE 2GB
-ENV ALLUXIO_UNDERFS_ADDRESS /data
-ENV ALLUXIO_RAM_FOLDER /dev/ram
-
 
 RUN mkdir -p /dev/ram
 RUN mkdir /data
@@ -30,4 +29,4 @@ ADD supervisord-*.conf /
 ADD start.sh /
 
 
-CMD ["/start.sh"]
+#CMD ["/start.sh"]

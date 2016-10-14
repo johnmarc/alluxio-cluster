@@ -16,5 +16,9 @@ elif [ "$1" == "local" ]; then
     echo "Starting both master and slave"
     /alluxio/bin/alluxio format
     /usr/bin/supervisord -c /supervisord-local.conf
+else
+    echo "Starting both."
+    /alluxio/bin/alluxio format
+    /usr/bin/supervisord -c /supervisord-local.conf
 fi
 
